@@ -1,0 +1,49 @@
+{
+  "name": "organizer",
+  "version": "0.1.0",
+  "categories": [
+    "core-os"
+  ],
+  "sourceRoot": "src",
+  "sourceLabel": "all-sorted-organizer-local",
+  "moduleSubdir": ".",
+  "copyFiles": [
+    "bin/organizer.js",
+    "lib/db.js",
+    "lib/organizer.js",
+    "migrations/001-initial.sql",
+    "migrations/002-organizer-meta.sql"
+  ],
+  "sanitizeRules": [],
+  "seed": null,
+  "dependencies": {
+    "packages": {},
+    "scripts": {}
+  },
+  "optionalComponents": [],
+  "target": {
+    "requiredPaths": []
+  },
+  "navPatch": null,
+  "validate": {
+    "requiredFiles": [
+      "organizer/bin/organizer.js",
+      "organizer/lib/db.js",
+      "organizer/lib/organizer.js",
+      "organizer/migrations/001-initial.sql"
+    ],
+    "assertions": [
+      {
+        "file": "organizer/lib/db.js",
+        "contains": "execFileSync",
+        "message": "Organizer must use the sqlite3 CLI"
+      }
+    ],
+    "probeUrls": []
+  },
+  "gateMinFiles": 5,
+  "denyTerms": [
+    "josephtandle",
+    ".myos/workspace"
+  ]
+}

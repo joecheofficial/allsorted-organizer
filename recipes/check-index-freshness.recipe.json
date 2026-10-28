@@ -1,0 +1,33 @@
+{
+  "id": "agent/organizer/check-index-freshness",
+  "layer": "agent",
+  "owner": "organizer",
+  "title": "Check whether the capability index needs refreshing",
+  "tags": [
+    "organizer",
+    "freshness",
+    "capabilities",
+    "read-only"
+  ],
+  "phrases": [
+    "is my capability index stale",
+    "has anything changed since the last index run",
+    "do I need to reindex",
+    "when was the index last built",
+    "should I rebuild the capability index",
+    "is the second brain stale",
+    "check if reindexing is needed"
+  ],
+  "actions": [
+    "search"
+  ],
+  "safety": {
+    "destructive": false,
+    "rule": "Read-only. Only compares file modification times and reads the existing index file. Never triggers a re-index itself."
+  },
+  "inputMode": "structured",
+  "requiredContext": [],
+  "outputMode": "text",
+  "fallbackPolicy": "deterministic_first",
+  "handler": "./check-index-freshness.js"
+}

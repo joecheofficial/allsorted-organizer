@@ -1,0 +1,27 @@
+{
+  "id": "agent/organizer/pull-connectors",
+  "layer": "agent",
+  "owner": "organizer",
+  "title": "Pull connected accounts into the second brain",
+  "tags": ["organizer", "second-brain", "connectors", "knowledge-graph"],
+  "phrases": [
+    "pull my connected accounts into my second brain",
+    "add my email contacts to the knowledge graph",
+    "turn my recent messages into linked notes",
+    "put my payments by month into the brain",
+    "add my recent google drive documents to the brain",
+    "put the emails I sent through resend into my second brain",
+    "feed my connectors into my notes",
+    "organizer pull connectors"
+  ],
+  "actions": ["pull"],
+  "safety": {
+    "destructive": false,
+    "rule": "Read only against every source: only search, list and GET calls through the modules the customer already connected, no sign-in of its own, no write API. Opt in per source, bounded by a date window and a cap. Messages that look like they carry a password, key or sign-in code are left out whole, and so are Drive files whose name or opening text looks like credentials. Drive notes hold file metadata plus a short excerpt of Google Docs only; sent-email notes count recipients and never name them. Notes are written only on this computer and carry their source so they can be tidied away again."
+  },
+  "inputMode": "structured",
+  "requiredContext": [],
+  "outputMode": "text",
+  "fallbackPolicy": "deterministic_first",
+  "handler": "./pull-connectors.js"
+}

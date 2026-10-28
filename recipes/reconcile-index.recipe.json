@@ -1,0 +1,33 @@
+{
+  "id": "agent/organizer/reconcile-index",
+  "layer": "agent",
+  "owner": "organizer",
+  "title": "Add new projects and refresh your index",
+  "taskClass": "default_automation",
+  "tags": [
+    "organizer",
+    "projects",
+    "index",
+    "reconciliation"
+  ],
+  "phrases": [
+    "reconcile my index",
+    "add new projects to my second brain",
+    "find projects missing from my index",
+    "update my project list",
+    "refresh my workspace index",
+    "make starter context files for new projects"
+  ],
+  "actions": [
+    "organize"
+  ],
+  "safety": {
+    "destructive": false,
+    "rule": "Adds project entries and starter context files, marks missing folders without deleting entries, and refreshes stale capabilities. Existing context files are never overwritten. Set args.dryRun or args[\"dry-run\"] to true to preview without writes."
+  },
+  "inputMode": "structured",
+  "requiredContext": [],
+  "outputMode": "text",
+  "fallbackPolicy": "deterministic_first",
+  "handler": "./reconcile-index.js"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "agent/organizer/schedule-nightly",
+  "layer": "agent",
+  "owner": "organizer",
+  "title": "Keep your index refreshed every night",
+  "taskClass": "default_automation",
+  "tags": [
+    "organizer",
+    "schedule",
+    "nightly",
+    "index"
+  ],
+  "phrases": [
+    "schedule my nightly index refresh",
+    "keep my project index up to date every night",
+    "turn on automatic index refresh",
+    "run organizer every night",
+    "set up the 03:30 index refresh",
+    "remove my nightly index schedule"
+  ],
+  "actions": [
+    "organize"
+  ],
+  "safety": {
+    "destructive": false,
+    "rule": "Replaces one local nightly schedule at 03:30. Set args.remove to true to unschedule it. Does not run indexing during setup."
+  },
+  "inputMode": "structured",
+  "requiredContext": [],
+  "outputMode": "text",
+  "fallbackPolicy": "deterministic_first",
+  "handler": "./schedule-nightly.js"
+}

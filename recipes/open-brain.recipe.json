@@ -1,0 +1,32 @@
+{
+  "id": "agent/organizer/open-brain",
+  "layer": "agent",
+  "owner": "organizer",
+  "title": "Open the second brain folder in the Obsidian graph viewer",
+  "tags": [
+    "organizer",
+    "second-brain",
+    "viewer",
+    "obsidian"
+  ],
+  "phrases": [
+    "open my second brain",
+    "show me my knowledge graph",
+    "open the brain in obsidian",
+    "let me see the graph view",
+    "organizer open brain",
+    "view my linked notes"
+  ],
+  "actions": [
+    "open"
+  ],
+  "safety": {
+    "destructive": false,
+    "notes": "Opens a local folder in a local app and adds it to that app's own vault list. Installs the app only when asked with args.install, and never replaces viewer settings that already exist."
+  },
+  "inputMode": "structured",
+  "requiredContext": [],
+  "outputMode": "text",
+  "fallbackPolicy": "deterministic_first",
+  "handler": "./open-brain.js"
+}

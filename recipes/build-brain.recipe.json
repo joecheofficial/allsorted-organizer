@@ -1,0 +1,35 @@
+{
+  "id": "agent/organizer/build-brain",
+  "layer": "agent",
+  "owner": "organizer",
+  "title": "Build the second brain folder and its knowledge graph",
+  "tags": [
+    "organizer",
+    "second-brain",
+    "knowledge-graph",
+    "notes"
+  ],
+  "phrases": [
+    "build my second brain",
+    "build my knowledge graph",
+    "turn my documents into linked notes",
+    "rebuild the brain folder",
+    "organizer build brain",
+    "read my documents and connect them",
+    "refresh my second brain notes"
+  ],
+  "actions": [
+    "build"
+  ],
+  "safety": {
+    "destructive": false,
+    "rule": "Reads markdown and text files, plus PDF and Office documents only with extraction explicitly enabled under the folders it is given. Never opens key or login files, never follows links out of those folders, never overwrites a note a person edited, and writes the notes only on this computer."
+  },
+  "inputMode": "structured",
+  "requiredContext": [],
+  "outputMode": "text",
+  "fallbackPolicy": "deterministic_first",
+  "handler": "./build-brain.js",
+  "taskClass": "default_automation",
+  "intent": "brain_build"
+}

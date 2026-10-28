@@ -1,0 +1,34 @@
+{
+  "id": "agent/organizer/index-workspace",
+  "layer": "agent",
+  "owner": "organizer",
+  "title": "Run a full re-index of a directory into the capability index",
+  "tags": [
+    "organizer",
+    "index",
+    "capabilities",
+    "second-brain"
+  ],
+  "phrases": [
+    "index my projects",
+    "rebuild the second brain",
+    "reindex my workspace",
+    "build the capability index",
+    "regenerate the capability database",
+    "scan for new recipes and skills",
+    "run the organizer indexer",
+    "update the routing index"
+  ],
+  "actions": [
+    "index"
+  ],
+  "safety": {
+    "destructive": false,
+    "rule": "Only reads recipe.json, SKILL.md, workflow.json, and package.json files under the scanned directory and upserts rows into its own sqlite database. Never deletes or rewrites any source file it indexes."
+  },
+  "inputMode": "structured",
+  "requiredContext": [],
+  "outputMode": "text",
+  "fallbackPolicy": "deterministic_first",
+  "handler": "./index-workspace.js"
+}

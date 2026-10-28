@@ -1,0 +1,35 @@
+{
+  "id": "agent/organizer/refresh-brain",
+  "layer": "agent",
+  "owner": "organizer",
+  "title": "Refresh the second brain from its folders, connectors and passes",
+  "tags": [
+    "organizer",
+    "second-brain",
+    "refresh",
+    "schedule"
+  ],
+  "phrases": [
+    "refresh my second brain",
+    "keep my knowledge graph current",
+    "re-run the brain passes",
+    "schedule a daily brain refresh",
+    "update my notes from my accounts and folders",
+    "organizer refresh brain"
+  ],
+  "actions": [
+    "refresh",
+    "schedule"
+  ],
+  "safety": {
+    "destructive": false,
+    "rule": "Runs only the folders, opted-in sources and registered passes listed in the settings file. Pass recipes must live inside the install root. The schedule is off by default and is turned on only on request."
+  },
+  "inputMode": "structured",
+  "requiredContext": [],
+  "outputMode": "text",
+  "fallbackPolicy": "deterministic_first",
+  "handler": "./refresh-brain.js",
+  "taskClass": "default_automation",
+  "intent": "brain_refresh"
+}

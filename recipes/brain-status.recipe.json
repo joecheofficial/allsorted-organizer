@@ -1,0 +1,32 @@
+{
+  "id": "agent/organizer/brain-status",
+  "layer": "agent",
+  "owner": "organizer",
+  "title": "Report the state of the second brain folder",
+  "tags": [
+    "organizer",
+    "second-brain",
+    "status",
+    "knowledge-graph"
+  ],
+  "phrases": [
+    "second brain status",
+    "how big is my knowledge graph",
+    "how many notes are in my brain",
+    "when was my brain last built",
+    "organizer brain status",
+    "is my second brain up to date"
+  ],
+  "actions": [
+    "status"
+  ],
+  "safety": {
+    "destructive": false,
+    "notes": "Counts notes and links and reads the last run records. Writes nothing and makes no network call."
+  },
+  "inputMode": "structured",
+  "requiredContext": [],
+  "outputMode": "text",
+  "fallbackPolicy": "deterministic_first",
+  "handler": "./brain-status.js"
+}

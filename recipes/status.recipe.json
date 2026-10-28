@@ -1,0 +1,27 @@
+{
+  "id": "agent/organizer/status",
+  "layer": "agent",
+  "owner": "organizer",
+  "title": "Check indexing readiness status",
+  "tags": ["organizer", "status", "doctor", "configured", "indexing"],
+  "phrases": [
+    "is the organizer configured",
+    "organizer status",
+    "organizer doctor",
+    "am i ready to index my workspace",
+    "is sqlite installed for indexing",
+    "check my capability index setup",
+    "why can i not index anything",
+    "is my nightly index refresh working"
+  ],
+  "actions": ["status"],
+  "safety": {
+    "destructive": false,
+    "notes": "Reads the environment, checks files, and queries the existing database for the last index refresh. Runs no indexing, writes no data, and makes no network call."
+  },
+  "inputMode": "structured",
+  "requiredContext": [],
+  "outputMode": "text",
+  "fallbackPolicy": "deterministic_first",
+  "handler": "./status.js"
+}

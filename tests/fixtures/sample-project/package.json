@@ -1,1 +1,0 @@
-{"name":"fixture-tools","version":"1.0.0","description":"A fixture command toolkit","scripts":{"check":"node check.js"},"bin":{"fixture":"bin/fixture.js"},"keywords":["tools","fixture"]}

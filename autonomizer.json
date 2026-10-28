@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "agentId": "organizer",
+  "loopBoundary": "Bounded self-improvement for read-only audits, dry-run classification, and Organizer-owned queue/status learning. Maintenance execution, destructive work, remote or external actions, and live operational or configuration mutation always require approval.",
+  "autonomousActions": [
+    "read-only workspace and capability audits",
+    "dry-run classification of organization and maintenance candidates",
+    "update Organizer-owned audit status and learning records",
+    "update Organizer-owned improvement queue entries without executing queued actions"
+  ],
+  "approvalRequiredActions": [
+    "file deletion and purge actions",
+    "data or media offload actions",
+    "SSH and other remote-system actions",
+    "external sends, publishing, and notifications",
+    "backup or snapshot deletion",
+    "live operational data, source, or configuration mutation",
+    "protected surface changes",
+    "new retention policies or retention-class changes",
+    "policy expansion or new maintenance permissions"
+  ],
+  "reflectionQuestions": [
+    {
+      "id": "audit_evidence",
+      "prompt": "Did the audit distinguish verified evidence from an assumption or stale status signal?"
+    },
+    {
+      "id": "dry_run_safety",
+      "prompt": "Did the dry-run classification preserve uncertain items for approval instead of treating them as maintenance work?"
+    },
+    {
+      "id": "allowlist_scope",
+      "prompt": "Was every maintenance action already explicitly allowlisted by Organizer policy, with no new deletion, offload, or retention class inferred?"
+    },
+    {
+      "id": "queue_learning_quality",
+      "prompt": "Do the Organizer-owned queue and status updates make the next safe review clearer without changing live operational data?"
+    }
+  ],
+  "lastAutonomizerUpdate": "2026-08-14T04:13:06.870Z"
+}

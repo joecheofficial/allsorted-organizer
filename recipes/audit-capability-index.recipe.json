@@ -1,0 +1,33 @@
+{
+  "id": "agent/organizer/audit-capability-index",
+  "layer": "agent",
+  "owner": "organizer",
+  "title": "Audit the capability index for dead links and orphan entries",
+  "tags": [
+    "organizer",
+    "audit",
+    "capabilities",
+    "read-only"
+  ],
+  "phrases": [
+    "audit the capability database",
+    "check the second brain for broken links",
+    "find orphan capabilities",
+    "verify the index integrity",
+    "does the routing index have dead references",
+    "check for deleted recipes still in the index",
+    "organizer audit"
+  ],
+  "actions": [
+    "audit"
+  ],
+  "safety": {
+    "destructive": false,
+    "rule": "Read-only. Only runs SELECT queries against its own sqlite database and never modifies the database, the index file, or any indexed source file."
+  },
+  "inputMode": "structured",
+  "requiredContext": [],
+  "outputMode": "text",
+  "fallbackPolicy": "deterministic_first",
+  "handler": "./audit-capability-index.js"
+}
